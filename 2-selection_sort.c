@@ -20,17 +20,16 @@ void selection_sort(int *array, size_t size)
 	for (i = 0; i < size - 1; i++)
 	{
 		k = i;
-		y = 0;
 		for (j = i + 1; j < size; j++)
 		{
 			if (array[k] > array[j])
 			{
 				k = j;
-				y = array[j];
 			}
 		}
 		if (y != 0)
 		{
+			array[k] = y
 			array[k] = array[i];
 			array[i] = y;
 		}

@@ -20,8 +20,7 @@ void swap(int *x, int *y) {
  * @left: the index of the first element of the partition
  * @right: the index of the last element of the partition
  *
- * Description: Uses the Lomuto partition scheme. Prints
- *              the array after each swap of two elements.
+ * return: above
  */
 int lomuto_partition(int *array, size_t size, int left, int right) {
 	int *pivot, above, below;
@@ -49,8 +48,6 @@ int lomuto_partition(int *array, size_t size, int left, int right) {
  * @left: the index of the first element of the partition
  * @right: the index of the last element of the partition
  *
- * Description: Uses the Lomuto partition scheme. Prints
- *              the array after each swap of two elements.
  */
 void lomuto(int *array, size_t size, int left, int right) {
 	int part;

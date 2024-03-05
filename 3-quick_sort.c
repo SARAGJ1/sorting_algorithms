@@ -1,11 +1,28 @@
 #include "sort.h"
 
+/**
+ * swap - swap two elements in an array
+ * @x: elem to swap with y
+ * @y: elem to swap with x
+ * @k: temp elem
+ *
+ */
 void swap(int *x, int *y) {
 	int k = *x;
 
 	*x = *y;
 	*y = k;
 }
+/**
+ * lomuto_partition - Lomuto partition scheme for Quick Sort
+ * @array: An array of integers.
+ * @size: The size of the array.
+ * @left: the index of the first element of the partition
+ * @right: the index of the last element of the partition
+ *
+ * Description: Uses the Lomuto partition scheme. Prints
+ *              the array after each swap of two elements.
+ */
 int lomuto_partition(int *array, size_t size, int left, int right) {
 	int *pivot, above, below;
 
@@ -25,6 +42,16 @@ int lomuto_partition(int *array, size_t size, int left, int right) {
 	}
 	return (above);
 }
+/**
+ * lomuto - Recursive function to implement Quick Sort
+ * @array: An array of integers.
+ * @size: The size of the array.
+ * @left: the index of the first element of the partition
+ * @right: the index of the last element of the partition
+ *
+ * Description: Uses the Lomuto partition scheme. Prints
+ *              the array after each swap of two elements.
+ */
 void lomuto(int *array, size_t size, int left, int right) {
 	int part;
 

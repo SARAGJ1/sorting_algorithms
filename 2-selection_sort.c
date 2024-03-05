@@ -11,7 +11,7 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t i, j, k = 0;
-	int y;
+	int y = 0;
 
 	if (array == NULL || size < 2)
 	{
@@ -27,12 +27,9 @@ void selection_sort(int *array, size_t size)
 				k = j;
 			}
 		}
-		if (y != 0)
-		{
-			array[k] = y
-			array[k] = array[i];
-			array[i] = y;
-		}
+		y = array[k];
+		array[k] = array[i];
+		array[i] = y;
 		print_array(array, size);
 	}
 }	

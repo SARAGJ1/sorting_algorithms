@@ -5,7 +5,9 @@
  * @x: elem to swap with y
  * @y: elem to swap with x
  */
-void swap(int *x, int *y) {
+
+void swap(int *x, int *y)
+{
 	int k = *x;
 
 	*x = *y;
@@ -20,11 +22,12 @@ void swap(int *x, int *y) {
  *
  * return: final partition index.
  */
-int lomuto_partition(int *array, size_t size, int left, int right) {
+int lomuto_partition(int *array, size_t size, int left, int right)
+{
 	int *pivot, above, below;
 
 	pivot = array + right;
-	for (above = below = left; below < right; below++){
+	for (above = below = left; below < right; below++) {
 		if (array[below] < *pivot) {
 			if (above < below) {
 				swap(array + below, array + above);

@@ -4,8 +4,6 @@
  * swap - swap two elements in an array
  * @x: elem to swap with y
  * @y: elem to swap with x
- * @k: temp elem
- *
  */
 void swap(int *x, int *y) {
 	int k = *x;
@@ -20,7 +18,7 @@ void swap(int *x, int *y) {
  * @left: the index of the first element of the partition
  * @right: the index of the last element of the partition
  *
- * return: above
+ * return: final partition index.
  */
 int lomuto_partition(int *array, size_t size, int left, int right) {
 	int *pivot, above, below;
@@ -48,6 +46,7 @@ int lomuto_partition(int *array, size_t size, int left, int right) {
  * @left: the index of the first element of the partition
  * @right: the index of the last element of the partition
  *
+ * Description: Uses the Lomuto partition scheme.
  */
 void lomuto(int *array, size_t size, int left, int right) {
 	int part;

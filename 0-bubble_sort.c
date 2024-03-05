@@ -3,9 +3,11 @@
 #include "sort.h"
 
 /**
- * bubble_sort - sorts an array of integers in ascending order
+ * bubble_sort - Sort an array of integers in ascending order.
+ * @array: An array of integers to sort.
+ * @size: The size of the array.
  *
- * Return: print array after each time you swap two elements
+ * Description: Prints the array after each swap.
  */
 
 void bubble_sort(int *array, size_t size)

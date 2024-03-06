@@ -22,6 +22,7 @@ void swap(int *x, int *y)
  * @right: the index of the last element of the partition
  *
  * @i: final partition index.
+ * return ; i
  */
 int lomuto_partition(int *array, size_t size, int left, int right)
 {

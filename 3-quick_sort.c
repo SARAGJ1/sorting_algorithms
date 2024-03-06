@@ -14,15 +14,14 @@ void swap(int *x, int *y)
 	*y = k;
 }
 /**
- * lomuto_partition - Order a subset of an array of integers according
- *
- * @array: An array of integers.
+ * lomuto_partition - Order a subset of an array of integers according to
+ *                    the lomuto partition scheme (last element as pivot).
+ * @array: The array of integers.
  * @size: The size of the array.
- * @left: the index of the first element of the partition
- * @right: the index of the last element of the partition
+ * @left: The starting index of the subset to order.
+ * @right: The ending index of the subset to order.
  *
- * @i: final partition index.
- * return : i if success
+ * Return: The final partition index.
  */
 int lomuto_partition(int *array, size_t size, int left, int right)
 {

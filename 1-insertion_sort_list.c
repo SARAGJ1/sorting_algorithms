@@ -12,23 +12,33 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	int size = sizeof(*list), i = 0;
-	listint_t *x;
+	listint_t *current;
 
-	if (*list == NULL)
-	{
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
-	}
-	while (i < size)
+	current = (*list)->next;
+	while (current != NULL)
 	{
-		if (list[i] > list[i + 1])
+		listint_t *temp = current->prev;
+		while (temp != NULL && temp->n > current->n)
 		{
-			x = list[i];
-			list[i] = list[i + 1];
-			list[i + 1] = x;
-			i = 0;
-			print_array(*list, size);
+			if (temp->prev != NULL)
+				temp->prev->next = current;
+			if (current->next != NULL)
+				current->next->prev = temp;
+
+			temp->next = current->next;
+			current->prev = temp->prev;
+
+			current->next = temp;
+			temp->prev = current;
+
+			if (current->prev == NULL)
+				*list = current;
+
+			print_list(*list);
+			temp = current->prev;
 		}
-		i++;
+	current = current->next;
 	}
 }
